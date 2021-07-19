@@ -43,12 +43,20 @@ $ cd /home/ubuntu/.nvm/versions/node/
 新しいパスが追加できましたら、
 
 ```shell
-$ export NODE_PATH=`npm root -g`
+$ echo "export NODE_PATH=`npm root -g`" >> /home/ubuntu/.bashrc
 ```
 
-を実行してみてください。これで、先ほど追加した保存先のパスを読み込むことができるようになります。
+上記コマンドを実行してみてください。これで、先ほど追加した保存先のパスを読み込むことができるようになります。
 
-それでは改めて、
+設定ファイルである `.bashrcファイル` を変更しましたので、設定が反映されるように
+
+```shell
+exec bash -l
+```
+
+を実行してください。
+
+設定が反映されましたので、それでは改めて、
 
 ```shell
 node app.js

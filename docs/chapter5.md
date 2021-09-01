@@ -12,3 +12,12 @@ GoogleニュースのRSS取得のためのURLが変更されました。
 
 [https://news.google.com/rss?hl=ja&gl=JP&ceid=JP:ja](https://news.google.com/rss?hl=ja&gl=JP&ceid=JP:ja)
 
+また、サーバーから直接、mysqlへのアクセスが制限されている可能性があります。node.jsからmysqlへのアクセスが上手くいかない場合は、mysqlにログインして、新しくmysqlユーザーを作成いただく必要があります。
+
+```javascript
+// 新規ユーザー作成
+create user '新しいユーザー名'@'localhost' identified with mysql_native_password by '任意のパスワード';
+
+
+// 権限を与える
+GRANT ALL ON データベース名.* TO '新しいユーザー名'@'localhost';

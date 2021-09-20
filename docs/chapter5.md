@@ -16,8 +16,10 @@ GoogleニュースのRSS取得のためのURLが変更されました。
 
 ```javascript
 // 新規ユーザー作成
-create user '新しいユーザー名'@'localhost' identified with mysql_native_password by '任意のパスワード';
+create user 新しいユーザー名@localhost identified with mysql_native_password by 任意のパスワード;
+```
 
-
+```
 // 権限を与える
-GRANT ALL ON データベース名.* TO '新しいユーザー名'@'localhost';
+GRANT ALL ON *.* TO 新しいユーザー名@localhost;
+```
